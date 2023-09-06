@@ -13,7 +13,7 @@
   </div>
   <div class="col-md-3 ">
    <a class="btn btn-success " href="">Login</a>
-   <a class="btn btn-primary" href="">Register</a>
+   <a class="btn btn-primary" href="register.jsp">Register</a>
   </div>
  </div>
 </div>
@@ -26,7 +26,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-house"></i> Home</a>
+          <a class="nav-link active" aria-current="page" href="index.jsp"><i class="fa-solid fa-house"></i> Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="#"><i class="fa-solid fa-book"></i> Recent Book</a>
