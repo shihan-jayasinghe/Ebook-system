@@ -11,6 +11,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 @WebServlet("/register")
 public class RegisterServlet extends HttpServlet{
@@ -34,14 +35,25 @@ public class RegisterServlet extends HttpServlet{
           us.setPho(pho);
           us.setPassword(psw);
           
-          UserDAOimple ui=new UserDAOimple(DBconnect.getConn());
-          boolean f=ui.userRegister(us);
-          if(f)
+          HttpSession se=req.getSession();
+          
+          if(che!=null)
           {
-        	  System.out.println("user register success....");
-          }
-          else {
-        	  System.out.println("user register failed!!");
+        	  UserDAOimple ui=new UserDAOimple(DBconnect.getConn());
+              boolean f=ui.userRegister(us);
+              if(f)
+              {
+            	  //System.out.println("user register success....");
+            	  se.setAttribute("succMsg", "Registration success..");
+            	  resp.sendRedirect("register.jsp");
+              }
+              else {
+            	  se.setAttribute("failMsg", "something went wrong!!");
+            	  resp.sendRedirect("register.jsp");
+              }
+          }else {
+        	  se.setAttribute("failMsg", "Please Agree to Terms and Conditions");
+        	  resp.sendRedirect("register.jsp");
           }
           
       }catch(Exception e)
