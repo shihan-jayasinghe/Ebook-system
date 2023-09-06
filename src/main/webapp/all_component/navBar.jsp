@@ -11,8 +11,8 @@
         <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
-  <div class="col-md-3">
-   <a class="btn btn-success" href="">Login</a>
+  <div class="col-md-3 ">
+   <a class="btn btn-success " href="">Login</a>
    <a class="btn btn-primary" href="">Register</a>
   </div>
  </div>

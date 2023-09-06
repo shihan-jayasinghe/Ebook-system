@@ -7,3 +7,7 @@
 	color: #303f9f;
 	border-radius: 8px;
 }
+
+.crd-ho:hover{
+	background-color:#f7f7f7;
+}
